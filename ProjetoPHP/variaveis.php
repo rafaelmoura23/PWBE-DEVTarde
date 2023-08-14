@@ -16,5 +16,4 @@
 
  echo PHP;
  echo HTML;
-
 ?>
