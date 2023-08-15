@@ -8,15 +8,12 @@ session_start();
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Sistema de Login - PHP + MySQL - Canal TI</title>
+    <title>Sistema de Login</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <section class="hero is-success is-fullheight">
-        <div class="hero-body">
-            <div class="container has-text-centered">
-                <div class="column is-4 is-offset-4">
-                    <h3 class="title has-text-grey">LOGIN BOOK HEAVEN</h3>
+                    <h3>LOGIN BOOK HEAVEN</h3>
                     <?php
                     if(isset($_SESSION['nao_autenticado'])):
                     ?>
@@ -27,7 +24,9 @@ session_start();
                     endif;
                     unset($_SESSION['nao_autenticado']);
                     ?>
+
                     <div class="box">
+
                         <form action="login.php" method="POST">
                             <div class="field">
                                 <div class="control">
@@ -42,11 +41,7 @@ session_start();
                             </div>
                             <button type="submit" class="button is-block is-link is-large is-fullwidth">Entrar</button>
                         </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+                    </div>    
 </body>
 
 </html>
