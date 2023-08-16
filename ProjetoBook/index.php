@@ -9,17 +9,20 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Sistema de Login</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/login.css">
 </head>
 
 <body>
                     <h3>LOGIN BOOK HEAVEN</h3>
+
                     <?php
                     if(isset($_SESSION['nao_autenticado'])):
                     ?>
+                    
                     <div class="notification is-danger">
                       <p>ERRO: Usuário ou senha inválidos.</p>
                     </div>
+
                     <?php
                     endif;
                     unset($_SESSION['nao_autenticado']);
@@ -39,9 +42,13 @@ session_start();
                                     <input name="senha" class="input is-large" type="password" placeholder="Sua senha">
                                 </div>
                             </div>
+
+                            <div class="field">
+
+                            </div>
+                            <a href="cadastro.php">Cadastrar</a>
                             <button type="submit" class="button is-block is-link is-large is-fullwidth">Entrar</button>
                         </form>
                     </div>    
 </body>
-
 </html>
