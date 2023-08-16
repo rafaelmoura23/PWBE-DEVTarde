@@ -9,11 +9,9 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Sistema de Login</title>
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-                    <h3>LOGIN BOOK HEAVEN</h3>
 
                     <?php
                     if(isset($_SESSION['nao_autenticado'])):
@@ -28,26 +26,22 @@ session_start();
                     unset($_SESSION['nao_autenticado']);
                     ?>
 
-                    <div class="box">
-
+                    <div class="box0" id="box">
+                        <h2>LOGIN</h2>
                         <form action="login.php" method="POST">
                             <div class="field">
-                                <div class="control">
-                                    <input name="usuario" name="text" class="input is-large" placeholder="Seu usuário" autofocus="">
-                                </div>
+                            <input name="usuario" name="text" id="usuarioField" class="input is-large" placeholder="Seu usuário" autofocus="">
+                            </div>
+
+                            <div class="field">   
+                                    <input name="senha" id="senhaField" class="input is-large" type="password" placeholder="Sua senha">
                             </div>
 
                             <div class="field">
-                                <div class="control">
-                                    <input name="senha" class="input is-large" type="password" placeholder="Sua senha">
-                                </div>
+                            <button type="submit"><a href="cadastro.php">Cadastrar</a></button> 
+                            <button type="submit">Entrar</button>
                             </div>
 
-                            <div class="field">
-
-                            </div>
-                            <a href="cadastro.php">Cadastrar</a>
-                            <button type="submit" class="button is-block is-link is-large is-fullwidth">Entrar</button>
                         </form>
                     </div>    
 </body>
