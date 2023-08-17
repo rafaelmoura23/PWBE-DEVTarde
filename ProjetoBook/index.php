@@ -1,48 +1,54 @@
 <?php
 session_start();
 ?>
+
 <!DOCTYPE html>
-<html>
-    
+<html lang="pt-br">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Sistema de Login</title>
-    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-                    <?php
-                    if(isset($_SESSION['nao_autenticado'])):
-                    ?>
+    <?php
+    if(isset($_SESSION['nao_autenticado'])):
+    ?>
                     
-                    <div class="notification is-danger">
-                      <p>ERRO: Usuário ou senha inválidos.</p>
-                    </div>
+    <div class="notification is-danger">
+        <p>ERRO: Usuário ou senha inválidos.</p>
+    </div>
 
-                    <?php
-                    endif;
-                    unset($_SESSION['nao_autenticado']);
-                    ?>
+    <?php
+    endif;
+    unset($_SESSION['nao_autenticado']);
+    ?>
 
-                    <div class="box0" id="box">
-                        <h2>LOGIN</h2>
-                        <form action="login.php" method="POST">
-                            <div class="field">
-                            <input name="usuario" name="text" id="usuarioField" class="input is-large" placeholder="Seu usuário" autofocus="">
-                            </div>
+    <div class="wrapper">
+        <form action="login.php" method="POST">
+            <h1>Login</h1>
+            <div class="input-box">
+                <input name="usuario" name="text" placeholder="Username" required>
+                <i class='bx bxs-user'></i>
+            </div>
+            <div class="input-box">
+                <input type="password" name="senha" placeholder="Password" required>
+                <i class='bx bxs-lock-alt'></i>
+            </div>
 
-                            <div class="field">   
-                                    <input name="senha" id="senhaField" class="input is-large" type="password" placeholder="Sua senha">
-                            </div>
+            <div class="remember-forgot">
+                <label> <input type="checkbox">Remember me</label>
+                <a href="#">Forgot Password?</a>
+            </div>
 
-                            <div class="field">
-                            <button type="submit"><a href="cadastro.php">Cadastrar</a></button> 
-                            <button type="submit">Entrar</button>
-                            </div>
+            <button type="submit" class="btn">Login</button>
 
-                        </form>
-                    </div>    
+            <div class="register-link">
+                <p>Don't have an account?<a href="cadastro.php">Register</a> </p>
+            </div>
+        </form>
+    </div>
+    
 </body>
 </html>

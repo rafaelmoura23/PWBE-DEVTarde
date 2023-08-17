@@ -3,7 +3,6 @@ session_start();
 include("conexao.php");
 
 if(empty($_POST['usuario']) || empty($_POST['senha']) || empty($_POST['usuario'])){
-    echo "Se liga aí cara";
     header('Location: cadastro.php');
     exit();
 }
