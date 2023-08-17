@@ -29,7 +29,7 @@ CREATE TABLE `usuario` (
   `nome` varchar(100) NOT NULL,
   `data_cadastro` datetime NOT NULL,
   PRIMARY KEY (`usuario_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -38,7 +38,7 @@ CREATE TABLE `usuario` (
 
 LOCK TABLES `usuario` WRITE;
 /*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
-INSERT INTO `usuario` VALUES (2,'joao','202cb962ac59075b964b07152d234b70','Joao','2023-08-16 16:36:26'),(3,'joana_maria','202cb962ac59075b964b07152d234b70','maria joana','2023-08-17 13:06:18'),(4,'vinicius','202cb962ac59075b964b07152d234b70','Vinicius Grupo 5','2023-08-17 15:13:37'),(5,'ezequiel','202cb962ac59075b964b07152d234b70','ezequiel grupo5','2023-08-17 15:13:58'),(6,'eduardo','202cb962ac59075b964b07152d234b70','eduardo grupo 5','2023-08-17 15:14:10'),(7,'igor','202cb962ac59075b964b07152d234b70','Igor grupo 5','2023-08-17 15:14:23'),(8,'rafael','202cb962ac59075b964b07152d234b70','rafael grupo 5','2023-08-17 15:15:13');
+INSERT INTO `usuario` VALUES (1,'rafael','202cb962ac59075b964b07152d234b70','rafael de','2023-08-17 16:46:33');
 /*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -59,4 +59,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-08-17 15:40:39
+-- Dump completed on 2023-08-17 16:50:45
