@@ -114,3 +114,18 @@ body{
 .register-link p a:hover{
     text-decoration: underline;
 }
+
+#loginErro{
+    background-color: rgb(255, 107, 107);
+    border: 2px solid rgba(255, 255, 255, .2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    color: black;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 18px;
+    text-align: center;
+}
+
+
+
+
