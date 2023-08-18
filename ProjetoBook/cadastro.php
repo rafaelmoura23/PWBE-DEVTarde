@@ -24,9 +24,11 @@ session_start();
                     if(isset($_SESSION['status_cadastro'])):
                     ?>
 
-                    <div class="notification is-success">
+                    <div class="notification is-success" id="cadastroOk">
+                        
                       <p>Cadastro efetuado!</p>
-                      <p>Faça login informando o seu usuário e senha <a href="login.php">aqui</a></p>
+                      <br>
+                      <p>Faça login <a href="login.php">aqui!</a></p>
                     </div>
 
                     <?php
@@ -37,8 +39,9 @@ session_start();
                     <?php
                     if(isset($_SESSION['usuario_existe'])):
                     ?>
-                    <div class="notification is-info">
-                        <p>O usuário escolhido já existe. Informe outro e tente novamente.</p>
+                    <div class="notification is-info" id="cadastroNotOk">
+                        <p>O usuário escolhido já existe.</p>
+                        <p>Informe outro e tente novamente.</p>
                     </div>
                     <?php
                     endif;
