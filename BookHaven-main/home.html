@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookhaven</title>
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+
+    <!-- Link importado para os ícones das redes sociais do footer -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- Link Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!-- Link de fontes para os textos -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <header class="container-header">
+        <section class="cabecalho">
+            <section class="container-cabecalho">
+                <div class="icon-logo-card">
+                    <img src="img/icons/navIcon.png" alt="logo" class="icon-logo">
+                    <!-- img/icons/navIcon.png -->
+                </div>
+                <div class="menu-pesquisa">
+                    <input type="search" name="search_input" id="search_input" placeholder="Pesquisar...">
+                    <i class="fa fa-search"></i>
+                </div>
+                <div class="cadastro">
+                    <img src="img/icons/user.png" alt="conta-icon">
+                    <span>Olá, faça seu <a href="">login</a> ou <a href="">cadastro</a></span>
+                </div>
+            </section>
+            <div class="link-menu">
+                <a href="">Home</a>
+                <a href="">Livros</a>
+                <a href="">Suporte</a>
+                <a href="">Contato</a>
+            </div>
+        </section>
+        <nav class="navMenu">
+            <section class="categorias-container">
+                <div class="cat-links">
+                    <a href="" class="menu-categorias-link">Mais Vendidos</a>
+                    <a href="" class="menu-categorias-link">|</a>
+                    <a href="" class="menu-categorias-link">Literatura Brasileira</a>
+                    <a href="" class="menu-categorias-link">|</a>
+                    <a href="" class="menu-categorias-link">Literatura Infátil</a>
+                    <a href="" class="menu-categorias-link">|</a>
+                    <a href="" class="menu-categorias-link">Romance</a>
+                    <a href="" class="menu-categorias-link">|</a>
+                    <a href="" class="menu-categorias-link">Ficção</a>
+                    <a href="" class="menu-categorias-link">|</a>
+                    <a href="" class="menu-categorias-link">Terror</a>
+                    <a href="" class="menu-categorias-link">|</a>
+                    <a href="" class="menu-categorias-link">Aventura</a>
+                </div>
+                <div class="car-fav">
+                    <a href=""><i class="fa-regular fa-heart"></i></a>
+                    <a href=""><i class="ri-shopping-cart-line"></i></a>
+                </div>
+            </section>
+        </nav>
+    </header>
+
+    <!-- CARROSEL - IMAGEM GENERICA, TENTE COLOCAR PRA CIMA NO TOPO -->
+    <!-- CARROSEL - IMAGEM GENERICA, TENTE COLOCAR PRA CIMA NO TOPO -->
+    <div id="carouselExampleControls" class="carousel slide principal" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100" src="img/banners/carrossel1.png" alt="Primeiro Slide"
+                    style="width: 960px; height: 600px;">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="img/banners/carrossel2.png" alt="Segundo Slide"
+                    style="width: 960px; height: 600px;">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="img/banners/carrossel3.png" alt="Terceiro Slide"
+                    style="width: 960px; height: 600px;">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="img/banners/carrossel4.png" alt="Quarto Slide"
+                    style="width: 960px; height: 600px;">
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Anterior</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Próximo</span>
+        </a>
+    </div>
+    <br><br><br><br><br><br>
+
+    <!-- CARROSEL DE CARDS  -->
+
+    <div class="titulo-cards">
+        <h2>Mais vendidos</h2>
+    </div>
+
+    <div class="container-fluid">
+        <div id="cardCarousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="event-card animate__animated animate__fadeIn">
+                                <div class="event-card animate__animated animate__fadeIn">
+                                    <div class="card-body">
+                                        <img src="img/livros/Harry Potter e o Cálice de Fogo.jpg" alt="Poster 2"
+                                            class="product-image"><br>
+                                        <div class="rating">
+                                            <span class="star">&#9733;</span>
+                                            <span class="star">&#9733;</span>
+                                            <span class="star">&#9733;</span>
+                                            <span class="star">&#9733;</span>
+                                            <span class="star">&#9733;</span>
+                                        </div>
+                                        <strong class="product-title">Harry Potter e o Cálice de Fogo</strong> <br>
+                                        <strong class="author-title">J.K. Rowling</strong>
+                                        <div class="product-price-container">
+                                            <button class="styled-button">R$39,99</button> <br>
+                                            <a href="#" class="button-hover-background">Adicionar ao carrinho</a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="event-card animate__animated animate__fadeIn">
+                                <div class="event-card animate__animated animate__fadeIn">
+                                    <div class="card-body">
+                                        <img src="img/livros/Percy Jackson a Maldição do Titã.jpg" alt="Poster 2"
+                                            class="product-image"><br>
+                                        <div class="rating">
+                                            <span class="star">&#9733;</span>
+                                            <span class="star">&#9733;</span>
+                                            <span class="star">&#9733;</span>
+                                            <span class="star">&#9733;</span>
+                                            <span class="star">&#9733;</span>
+                                        </div>
+                                        <strong class="product-title">Percy Jackson: a Maldição do Titã</strong> <br>
+                                        <strong class="author-title">Rick Riordan</strong>
+                                        <div class="product-price-container">
+                                            <button class="styled-button">R$39,99</button> <br>
+                                            <a href="#" class="button-hover-background">Adicionar ao carrinho</a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="event-card animate__animated animate__fadeIn">
+                                <div class="event-card animate__animated animate__fadeIn">
+                                    <div class="card-body">
+                                        <img src="img/livros/O Pequeno Principe.jpg" alt="Poster 2"
+                                            class="product-image" height="510px"><br>
+                                        <div class="rating">
+                                            <span class="star">&#9733;</span>
+                                            <span class="star">&#9733;</span>
+                                            <span class="star">&#9733;</span>
+                                            <span class="star">&#9733;</span>
+                                            <span class="star">&#9733;</span>
+                                        </div>
+                                        <strong class="product-title">Pequeno Príncipe</strong> <br>
+                                        <strong class="author-title">Antoine de Saint-Exupéry</strong>
+                                        <div class="product-price-container">
+                                            <button class="styled-button">R$39,99</button> <br>
+                                            <a href="#" class="button-hover-background">Adicionar ao carrinho</a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="event-card animate__animated animate__fadeIn">
+                                <div class="event-card animate__animated animate__fadeIn">
+                                    <div class="card-body">
+                                        <img src="img/livros/o Alquimista.png" alt="Poster 2" class="product-image"
+                                            height="510px"><br>
+                                        <div class="rating">
+                                            <span class="star">&#9733;</span>
+                                            <span class="star">&#9733;</span>
+                                            <span class="star">&#9733;</span>
+                                            <span class="star">&#9733;</span>
+                                            <span class="star">&#9733;</span>
+                                        </div>
+                                        <strong class="product-title">O Alquimista</strong> <br>
+                                        <strong class="author-title">Paulo Coelho</strong>
+                                        <div class="product-price-container">
+                                            <button class="styled-button">R$39,99</button> <br>
+                                            <a href="#" class="button-hover-background">Adicionar ao carrinho</a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#cardCarousel" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only"></span>
+                        </a>
+                        <a class="carousel-control-next" href="#cardCarousel" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only"></span>
+                        </a>
+                    </div>
+                </div>
+
+
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="event-card animate__animated animate__fadeIn">
+                                <div class="event-card animate__animated animate__fadeIn">
+                                    <div class="card-body">
+                                        <img src="img/livros/O Codigo Da Vinci.png" alt="Poster 2" class="product-image"
+                                            height="510px"> <br>
+                                            <div class="rating">
+                                                <span class="star">&#9733;</span>
+                                                <span class="star">&#9733;</span>
+                                                <span class="star">&#9733;</span>
+                                                <span class="star">&#9733;</span>
+                                                <span class="star">&#9733;</span>
+                                            </div>
+                                        <strong class="product-title">O Código da Vinci</strong> <br>
+                                        <strong class="author-title">Dan Brown</strong>
+                                        <div class="product-price-container">
+                                            <button class="styled-button">R$39,99</button> <br>
+                                            <a href="#" class="button-hover-background">Adicionar ao carrinho</a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="event-card animate__animated animate__fadeIn">
+                                <div class="event-card animate__animated animate__fadeIn">
+                                    <div class="card-body">
+                                        <img src="img/livros/Sobrevivendo no Inferno.jpg" alt="Poster 2"
+                                            class="product-image" height="510px"> <br>
+                                            <div class="rating">
+                                                <span class="star">&#9733;</span>
+                                                <span class="star">&#9733;</span>
+                                                <span class="star">&#9733;</span>
+                                                <span class="star">&#9733;</span>
+                                                <span class="star">&#9733;</span>
+                                            </div>
+                                        <strong class="product-title">Sobrevivendo no Inferno</strong> <br>
+                                        <strong class="author-title">Acauam Oliveira</strong>
+                                        <div class="product-price-container">
+                                            <button class="styled-button">R$39,99</button> <br>
+                                            <a href="#" class="button-hover-background">Adicionar ao carrinho</a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="event-card animate__animated animate__fadeIn">
+                                <div class="event-card animate__animated animate__fadeIn">
+                                    <div class="card-body">
+                                        <img src="img/livros/Um Conto de Duas Cidades.png" alt="Poster 2"
+                                            class="product-image" height="510px"> <br>
+                                            <div class="rating">
+                                                <span class="star">&#9733;</span>
+                                                <span class="star">&#9733;</span>
+                                                <span class="star">&#9733;</span>
+                                                <span class="star">&#9733;</span>
+                                                <span class="star">&#9733;</span>
+                                            </div>
+                                        <strong class="product-title">Um Conto de Duas Cidades</strong> <br>
+                                        <strong class="author-title">Charles Dickens</strong>
+                                        <div class="product-price-container">
+                                            <button class="styled-button">R$39,99</button> <br>
+                                            <a href="#" class="button-hover-background">Adicionar ao carrinho</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="event-card animate__animated animate__fadeIn">
+                                <div class="event-card animate__animated animate__fadeIn">
+                                    <div class="card-body">
+                                        <img src="img/livros/Vidas Secas.jpg" alt="Poster 2" class="product-image"
+                                            height="510px"> <br>
+                                            <div class="rating">
+                                                <span class="star">&#9733;</span>
+                                                <span class="star">&#9733;</span>
+                                                <span class="star">&#9733;</span>
+                                                <span class="star">&#9733;</span>
+                                                <span class="star">&#9733;</span>
+                                            </div>
+                                        <strong class="product-title">Vidas Secas</strong> <br>
+                                        <strong class="author-title">Graciliano Ramos</strong>
+                                        <div class="product-price-container">
+                                            <button class="styled-button">R$39,99</button> <br>
+                                            <a href="#" class="button-hover-background">Adicionar ao carrinho</a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="event-card animate__animated animate__fadeIn">
+                                <div class="event-card animate__animated animate__fadeIn">
+                                    <div class="card-body">
+                                        <img src="img/livros/Harry Potter Pedra Filosofal.png" alt="Poster 2" class="product-image"
+                                            height="510px"> <br>
+                                            <div class="rating">
+                                                <span class="star">&#9733;</span>
+                                                <span class="star">&#9733;</span>
+                                                <span class="star">&#9733;</span>
+                                                <span class="star">&#9733;</span>
+                                                <span class="star">&#9733;</span>
+                                            </div>
+                                        <strong class="product-title">Harry Potter e a Pedra Filosofal</strong> <br>
+                                        <strong class="author-title">J.K. Rowling</strong>
+                                        <div class="product-price-container">
+                                            <button class="styled-button">R$39,99</button> <br>
+                                            <a href="#" class="button-hover-background">Adicionar ao carrinho</a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="event-card animate__animated animate__fadeIn">
+                                <div class="event-card animate__animated animate__fadeIn">
+                                    <div class="card-body">
+                                        <img src="img/livros/Os Sete Maridos.jpg" alt="Poster 2"
+                                            class="product-image" height="510px"> <br>
+                                            <div class="rating">
+                                                <span class="star">&#9733;</span>
+                                                <span class="star">&#9733;</span>
+                                                <span class="star">&#9733;</span>
+                                                <span class="star">&#9733;</span>
+                                                <span class="star">&#9733;</span>
+                                            </div>
+                                        <strong class="product-title">Os sete Maridos</strong> <br>
+                                        <strong class="author-title">Taylor Jenkins Reid</strong>
+                                        <div class="product-price-container">
+                                            <button class="styled-button">R$39,99</button> <br>
+                                            <a href="#" class="button-hover-background">Adicionar ao carrinho</a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="event-card animate__animated animate__fadeIn">
+                                <div class="event-card animate__animated animate__fadeIn">
+                                    <div class="card-body">
+                                        <img src="img/livros/Um Conto de Duas Cidades.png" alt="Poster 2"
+                                            class="product-image" height="510px"> <br>
+                                            <div class="rating">
+                                                <span class="star">&#9733;</span>
+                                                <span class="star">&#9733;</span>
+                                                <span class="star">&#9733;</span>
+                                                <span class="star">&#9733;</span>
+                                                <span class="star">&#9733;</span>
+                                            </div>
+                                        <strong class="product-title">Blade Runner</strong> <br>
+                                        <strong class="author-title">Philip K. Dick</strong>
+                                        <div class="product-price-container">
+                                            <button class="styled-button">R$39,99</button> <br>
+                                            <a href="#" class="button-hover-background">Adicionar ao carrinho</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="event-card animate__animated animate__fadeIn">
+                                <div class="event-card animate__animated animate__fadeIn">
+                                    <div class="card-body">
+                                        <img src="img/livros/Vidas Secas.jpg" alt="Poster 2" class="product-image"
+                                            height="510px"> <br>
+                                            <div class="rating">
+                                                <span class="star">&#9733;</span>
+                                                <span class="star">&#9733;</span>
+                                                <span class="star">&#9733;</span>
+                                                <span class="star">&#9733;</span>
+                                                <span class="star">&#9733;</span>
+                                            </div>
+                                        <strong class="product-title">Auto da Compadecida</strong> <br>
+                                        <strong class="author-title">Ariano Suassuna</strong>
+                                        <div class="product-price-container">
+                                            <button class="styled-button">R$39,99</button> <br>
+                                            <a href="#" class="button-hover-background">Adicionar ao carrinho</a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <a class="carousel-control-prev" href="#cardCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only"></span>
+            </a>
+            <a class="carousel-control-next" href="#cardCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only"></span>
+            </a>
+        </div>
+    </div>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <section class="containerProducts">
+        <div class="wrapper">
+            <i id="left" class="fa-solid fa-angle-left"></i>
+            <ul class="carouselProducts">
+                <li class="card">
+                    <div class="img"><img src="img/el principito.jpg" alt="img" draggable="false"></div>
+                    <h3>O pequeno Príncipe</h3>
+                    <span>Livros Crianças</span>
+                </li>
+                <li class="card">
+                    <div class="img"><img src="img/1984 George Orwell.png" alt="img" draggable="false"></div>
+                    <h3>1984 - George Orwell</h3>
+                    <span>Livros Crianças</span>
+                </li>
+                <li class="card">
+                    <div class="img"><img src="img/A Culpa é das Estrelas.jpg" alt="img" draggable="false"></div>
+                    <h3>A Culpa é das Estrelas</h3>
+                    <span>Livros Crianças</span>
+                </li>
+                <li class="card">
+                    <div class="img"><img src="img/A Revolução dos Bichos.jpg" alt="img" draggable="false"></div>
+                    <h3>A Revolução dos Bichos</h3>
+                    <span>Livros Crianças</span>
+                </li>
+                <li class="card">
+                    <div class="img"><img src="img/Auto da Compadecida.jpg" alt="img" draggable="false"></div>
+                    <h3>Auto da Compadecida</h3>
+                    <span>Livros Crianças</span>
+                </li>
+                <li class="card">
+                    <div class="img"><img src="img/Capitães de Areia.jpg" alt="img" draggable="false"></div>
+                    <h3>Capitães de Areia</h3>
+                    <span>Livros Crianças</span>
+                </li>
+            </ul>
+            <i id="right" class="fa-solid fa-angle-right"></i>
+        </div>
+    </section>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <!-- Recomendações da Semana -->
+    <div class="recomendacoes-semana">
+        <h1>Recomendações da Semana</h1>
+    </div>
+
+    <section class="recomendacao">
+        <div class="container-recomendacoes">
+
+            <img src="img/livros/Fundação.png" alt=""> <!-- Colocar a imagem do livro aqui -->
+            <section class="texto">
+                <h2 class="titulo">A Fundação</h2>
+                <p class="paragrafo">Fundação é uma jornada por política, economia e sociedade. É uma história que aborda - como o próprio Asimov pesquisou e se inspirou - a queda de um império considerado, até então, inquebrável (tal como foi com o império romano). E o que se segue à decadência de um sistema intergaláctico tão impecável.
+
+                    Lentamente, as "profecias" de Seldon se concretizam. Tudo que seus estudos previram vai acontecer, mas ele deixa bem claro, enquanto ainda era vivo, que não pode influenciar. O futuro depende de decisões e de liberdade de decidir, ainda que ele pavimente o caminho pelo qual as futuras gerações - fadadas ao caos - devem seguir.
+                    
+                    É muito, muito interessante justamente por lidar com temáticas que atravessaram a História: religião, comércio, todos os tipos de política. Com o passar de muitos anos, acompanhamos essas coisas ditarem o rumo do futuro - em direção ao pandemônio completo ou ao recomeço. Fundação é o primeiro livro da consagrada trilogia de Isaac Asimov e com certeza me deixou curiosa para ver o que os próximos anos desse futuro reservam. Com adaptação chegando pela Apple TV, vale a pena demais conhecer esse clássico.
+                </p>
+            </section>
+        </div>
+
+        <div class="container-recomendacoes2">
+
+            <section class="texto2">
+                <h2 class="titulo">Quarto do Despejo</h2>
+                <p class="paragrafo">Quarto de Despejo traz em seus diários (divididos em dia, mês e ano) o retrato do cotidiano da favela de Canindé. Nele, Carolina narra como consegue sobreviver sendo catadora de lixo e metal em São Paulo e como a falta de dinheiro e de outro tipo de trabalho afetam a sua vida.
+
+                    Em meio a isso, a autora conta sua rotina vivendo na favela, e como tinha que fazer sacrifícios para seus três filhos, já que era mãe solteira e tinha que alimentá-los e cuidar de tudo sozinha, além de ter que lidar com o preconceito de não casar de novo. Pensando na história, um elemento muito importante nesse contexto é a fome, que a autora diz ter a cor amarela. Carolina tentava fugir, mas às vezes ela chegava com força em sua família (sendo que, para ela, a pior dor era ver seus filhos passando fome). Assim, ela trabalhava muito para comprar comida, além de receber alguma doações e buscar restos de alimentos nas feiras e, até mesmo, no lixo. Para além disso tudo, Quarto de Despejo é um relato fiel das dificuldades enfrentadas em meio à favela, mostrando como uma mulher solteira batalha para alimentar suas crianças e sobreviver em meio à sua condição de invisível e sua miséria, e como ela tem esperanças de mudança apesar de tudo o que passa diariamente.
+                </p>
+            </section>
+
+            <img src="img/livros/Quarto do Despejo.jpg" alt=""> <!-- Colocar a imagem do livro aqui -->
+        </div>
+
+    </section>
+
+    <!-- Avaliações dos Clientes -->
+    <div class="titulo-avaliacoes">
+        <h2>Avaliações dos nossos Clientes</h2>
+    </div> <br> <br>
+
+   <section class="cards-avaliacoes">
+    <div class="card-avaliacao">
+        <img class="user" src="imgAvaliacoes/matue.jpg" alt="">
+        <h3>Matuê</h3>
+        <div class="stars-avaliacao">
+            <img class="star-user" src="imgAvaliacoes/star.svg" alt="">
+            <img class="star-user" src="imgAvaliacoes/star.svg" alt="">
+            <img class="star-user" src="imgAvaliacoes/star.svg" alt="">
+            <img class="star-user" src="imgAvaliacoes/star.svg" alt="">
+            <img class="star-user" src="imgAvaliacoes/star.svg" alt="">
+        </div>
+
+        <p>"Estou encantado com a experiência que tive na BookHaven! Encontrei uma vasta coleção de livros incríveis e a facilidade de navegação no site é impressionante. A entrega rápida e o atendimento excepcional ao cliente me fizeram sentir realmente valorizado. Sem dúvida, a BookHaven é o destino definitivo para os amantes de livros como eu."</p>
+
+    </div>
+
+    <div class="card-avaliacao">
+        <img class="user" src="imgAvaliacoes/budah.jpg" alt="">
+        <h3>Lady Gaga</h3>
+        <div class="stars-avaliacao">
+            <img class="star-user" src="imgAvaliacoes/star.svg" alt="">
+            <img class="star-user" src="imgAvaliacoes/star.svg" alt="">
+            <img class="star-user" src="imgAvaliacoes/star.svg" alt="">
+            <img class="star-user" src="imgAvaliacoes/star.svg" alt="">
+            <img class="star-user" src="imgAvaliacoes/star.svg" alt="">
+        </div>
+
+        <p>"A BookHaven superou todas as minhas expectativas! Encontrei os livros que estava procurando facilmente e a qualidade do serviço é realmente excepcional. A variedade de opções e a rapidez na entrega me conquistaram. Estou muito satisfeito e recomendo a BookHaven a todos os apaixonados por leitura. É o site perfeito para os amantes de livros."</p>
+        
+    </div>
+
+    <div class="card-avaliacao">
+        <img class="user" src="imgAvaliacoes/vino.jpg" alt="">
+        <h3>Craque Neto</h3>
+        <div class="stars-avaliacao">
+            <img class="star-user" src="imgAvaliacoes/star.svg" alt="">
+            <img class="star-user" src="imgAvaliacoes/star.svg" alt="">
+            <img class="star-user" src="imgAvaliacoes/star.svg" alt="">
+            <img class="star-user" src="imgAvaliacoes/star.svg" alt="">
+            <img class="star-user" src="imgAvaliacoes/star.svg" alt="">
+        </div>
+
+        <p>"Minha experiência com a BookHaven foi incrível! Encontrei os melhores títulos para ampliar minha coleção e a eficiência na entrega me surpreendeu. A BookHaven se tornou minha escolha número um para adquirir livros online. Qualidade, variedade e praticidade em um só lugar! Apesar do site ter sido criado recentemente, já conquistou o meu coração e o de minha família!"</p>
+        
+    </div>
+   </section>
+
+    <!-- Rodapé do site -->
+    <footer>
+        <div id="footer_content">
+            <div id="footer_contacts">
+                <h2>BookHaven</h2>
+                <p>Onde sonhos ganham forma!</p>
+
+                <div id="footer_social_media">
+                    <a href="https://www.instagram.com" class="footer-link" id="instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="https://twitter.com" class="footer-link" id="twitter">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+
+                    <a href="https://facebook.com" class="footer-link" id="facebook">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                </div>
+
+
+            </div>
+
+            <ul class="footer-list">
+                <li>
+                    <h3>Fale Conosco</h3>
+                </li>
+
+                <li>
+                    <a href="" class="footer-link">SAC</a>
+                </li>
+
+                <li>
+                    <a href="#" class="footer-link">Suporte</a>
+                </li>
+
+                <li>
+                    <a href="#" class="footer-link">Contatos</a>
+                </li>
+            </ul>
+
+            <ul class="footer-list">
+                <li>
+                    <h3>Produtos</h3>
+                </li>
+
+                <li>
+                    <a href="#" class="footer-link">Categorias</a>
+                </li>
+
+                <li>
+                    <a href="#" class="footer-link">Mais Recentes</a>
+                </li>
+
+                <li>
+                    <a href="#" class="footer-link">Mais Vendidos</a>
+                </li>
+            </ul>
+
+            <div id="footer_subscribe">
+                <h3>Inscreva-se</h3>
+                <p>Coloque o seu email para ser notificado sobre nossos novos livros</p>
+
+                <div id="input_group">
+                    <input type="email" id="email">
+                    <button><i class="fa-regular fa-envelope"></i></button>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="footer_copyright">
+            BookHaven &#169
+            2023 all rights reserved
+        </div>
+    </footer>
+</body>
+
+<!-- Link Bootstrap -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+
+</html>
