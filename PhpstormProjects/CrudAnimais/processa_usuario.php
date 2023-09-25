@@ -12,8 +12,7 @@ if (!empty($_POST)) {
 (nome, data_nascimento, telefone, email, senha)
 VALUES
 (:nome, :dataNascimento, :telefone, :email, :senha)";
-
-        // Preparar a SQL (pdo)
+// Preparar a SQL (pdo)
         $stmt = $pdo->prepare($sql);
 // Definir/organizar os dados p/ SQL
         $dados = array(

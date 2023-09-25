@@ -25,6 +25,7 @@ Senha
             <label for="dataNascimento">Data de Nascimento</label>
             <input type="date" name="dataNascimento" id="dataNascimento" class="formcontrol" value="1980-01-01">
         </div>
+
         <div class="col-4">
             <label for="telefone">Telefone para Contato</label>
             <input type="tel" name="telefone" id="telefone" class="form-control">
