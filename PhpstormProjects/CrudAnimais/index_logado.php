@@ -9,6 +9,54 @@ if (empty($_SESSION)) {
 }
 ?>
 
+<?php if (!empty($anuncios)) { ?>
+<!-- Aqui que será montada a tabela com a relação de anúncios!! -->
+<div class="container">
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Fase</th>
+            <th scope="col">Tipo</th>
+            <th scope="col">Pelagem / Cor</th>
+            <th scope="col">Raça</th>
+            <th scope="col">Sexo</th>
+            <th scope="col">Ações</th>
+        </tr>
+        </thead>
+        <tbody>
+        <?php foreach ($anuncios as $a) { ?>
+        <tr>
+            <th scope="row"><?php echo $a['id']; ?></th>
+            <td>
+                <?php
+if ($a['fase'] == 'A') {
+echo "Adulto";
+} else {
+    echo "Filhote";
+}
+                ?>
+            </td>
+            <td><?php echo $a['tipo'] == 'G' ? "Gato" : "Cachorro"; ?></td>
+            <td><?php echo $a['pelagem_cor']; ?></td>
+            <td><?php echo $a['raca']; ?></td>
+            <td><?php echo $a['sexo'] == 'M' ? "Macho" : "Fêmea"; ?></td>
+            <td>
+                <?php if ($a['email_usuario'] == $_SESSION['email']) { ?>
+                    <a href="alt_anuncio.php?id_anuncio=<?php echo $a['id']; ?>"
+                       class="btn btn-warning">Alterar</a>
+                    <a href="del_anuncio.php?id_anuncio=<?php echo $a['id']; ?>"
+                       class="btn btn-danger">Excluir</a>
+                <?php } ?>
+            </td>
+        </tr>
+        <?php } ?>
+        </tbody>
+    </table>
+</div>
+<?php } ?>
+
+
 
 <!DOCTYPE html>
 <html lang="pt-br">

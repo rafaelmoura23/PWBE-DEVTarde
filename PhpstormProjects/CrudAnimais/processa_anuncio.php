@@ -53,6 +53,7 @@ VALUES
 else {
     header("Location: index_logado.php?msgErro=Erro de acesso.");
 }
+
 die();
 // Redirecionar para a página inicial (index_logado) c/ mensagem erro/sucesso
 ?>
