@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crud Simples</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <form action="?act-save" method="POST" name="form1">
+        <!-- Formulário para adicionar/alterar registros -->
+
+        <div class="inputs">
+            <h1>Agenda de produtos</h1>
+
+            <div class="campos">
+                <input type="hidden" name="id" id="" />
+                Nome:
+                <input type="text" name="nome" />
+                E-mail:
+                <input type="text" name="email" id="" />
+                Celular:
+                <input type="text" name="celular" id="" />
+            </div>
+
+            <div class="buttons">
+                <input type="submit" value="salvar" />
+                <input type="reset" value="novo" />
+            </div>
+        </div>
+
+    </form>
+
+    <table border="1" width="100%">
+        <thead>
+            <!-- Cabeçalho da Tabela -->
+            <tr>
+                <th>Nome</th>
+                <th>E-mail</th>
+                <th>Celular</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <!-- Exemplo de linha na tabela -->
+                <td>nome</td>
+                <td>email</td>
+                <td>celular</td>
+                <td>
+                    <a href="#">Alterar</a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="#">Excluir</a>
+
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+
+</html>
