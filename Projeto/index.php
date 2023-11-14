@@ -29,8 +29,8 @@ if (isset($_REQUEST["act"]) && $_REQUEST["act"] == "save" && $nome != "") {
     try {
         //Preparar e executar a inserção de um novo registro no banco de dados
         $stmt = $pdo->prepare("INSERT INTO produtos (nome, email, celular) VALUES (?,?,?)");
-        $stmt->bindParam(1, $email);
-        $stmt->bindParam(2, $nome);
+        $stmt->bindParam(1, $nome);
+        $stmt->bindParam(2, $email);
         $stmt->bindParam(3, $celular);
     } catch (\Throwable $th) {
 

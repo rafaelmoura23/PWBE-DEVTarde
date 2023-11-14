@@ -5,7 +5,6 @@
 body{
     background-color: aquamarine;
     font-family: cursive;
-
 }
 
 .inputs{
@@ -57,4 +56,26 @@ h1{
     align-items: center;
     margin: 15px;
     font-size: 20px;
+}
+
+
+.botoes{
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.botoes a{
+    background-color: azure;
+    padding: 5px;
+    margin: 2px;
+    border-radius: 10px;
+    font-size: 17px;
+    border: 1px solid #000000;
+    color: black;
+    text-decoration: none;
+}
+
+.botoes a:hover{
+    background-color: rgb(195, 241, 241);
 }
