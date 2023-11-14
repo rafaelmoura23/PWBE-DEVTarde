@@ -39,6 +39,7 @@ body{
 .buttons input:hover{
     color: #000000;
     background-color: aqua;
+    box-shadow: 0px 0px 8px #000000;
 }
 
 h1{
@@ -60,7 +61,6 @@ h1{
 
 
 .botoes{
-    background-color: antiquewhite;
     display: flex;
     justify-content: space-evenly;
 }
@@ -74,8 +74,11 @@ h1{
     border: 1px solid #000000;
     color: black;
     text-decoration: none;
+    box-shadow: 0px 0px 5px #000000;
 }
 
 .botoes a:hover{
     background-color: rgb(195, 241, 241);
+    box-shadow: 0px 0px 8px #000000;
 }
+
