@@ -1,0 +1,65 @@
+<html>
+<title>Administraçãoo da Loja</title>
+<link rel="stylesheet" href="style.css">
+
+<body>
+  <div align="center" class="tudo">
+
+    <div align="center" class="incluirProdutos"><b>INCLUIR PRODUTOS</b>
+
+      <form method="POST" action="administra.php">
+        <input type="hidden" name="operacao" value="incluir">
+
+        <div class="first">
+          <p>Código: <input type="text" name="codigo" size="5"></p>
+          <p>Nome do produto: <input type="text" name="nome" size="20"></p>
+        </div>
+
+        <p align="center">Descrição do produto:<br> <textarea rows="7" name="descricao" cols="50"></textarea> </p>
+
+        <div class="second">
+          <p>Preço: <input type="text" name="preco" size="10"></p>
+          <p>Peso: <input type="text" name="peso" size="10"></p>
+        </div>
+        
+        <div class="tres">
+          <p>Cód. Categoria: <input type="text" name="cc" size="4"></p>
+          <p> Cód. Subcategoria: <input type="text" name="cs" size="4"></p>
+        </div>
+
+        <p align="center">Inf. Adicionais: <input type="text" name="ad" size="20"></p>
+
+        <p align="center"><input type="submit" class="buttonEnviar" value="Incluir Produto" name="enviar"></p>
+      </form>
+    </div>
+
+
+    <div class="ambos">
+
+      <div align="center" class="excluirProdutos">
+        <b>EXCLUIR PRODUTOS</b>
+        <p>Código do produto a ser excluído:</p>
+        <form method="POST" action="administra.php">
+          <input type="hidden" name="operacao" value="excluir">
+          <p align="center"><input type="text" name="codigo" size="5"></p>
+          <p align="center"><input type="submit" class="buttonExcluir" value="Excluir Produto" name="enviar"></p>
+        </form>
+      </div>
+
+
+      <div align="center" class="mostrarProdutos">
+        <b>MOSTRAR PRODUTOS</b> <br>
+        <br> Clique no botão abaixo para exibir todos os produtos da loja:</p>
+        <form method="POST" action="administra.php" name="operacao" value="mostrar">
+          <p align="center"><input type="submit" class="buttonMostrar" value="Mostrar Produtos" name="enviar"></p>
+        </form>
+      </div>
+
+    </div>
+
+
+
+  </div>
+</body>
+
+</html>
